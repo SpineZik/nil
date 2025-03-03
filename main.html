@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-    <title>Купить хлеб</title>
-    <style>
-    body {
-      background-image:('https://i.postimg.cc/JnCH7Tty/i.webp'); /* Замените на URL вашей картинки */
-      background-size: cover; /* Растягивает картинку на весь экран */
-      background-repeat: no-repeat; /* Запрещает повторение картинки */
-      background-attachment: fixed; /* Фиксирует картинку при прокрутке */
-      margin: 0; /* Убирает отступы body */
-      height: 100vh; /* Занимает всю высоту экрана */
-      overflow: hidden; /* Предотвращает появление полосы прокрутки, если картинка чуть больше экрана */
-    }
+<html>
+<head>
+<title>Кнопка со звуком</title>
+<style>
+body {
+  background-image: url('images/background.jpg'); /* Укажите путь к вашей картинке */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    #myButton {
-      position: fixed; /* Фиксированное позиционирование поверх всего контента */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent; /* Полностью прозрачный фон */
-      border: none; /* Убирает рамку */
-      cursor: pointer; /* Меняет курсор на указатель */
-      z-index: 1000; /* Убедитесь, что кнопка находится над всем остальным */
-    }
+#myButton {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
 
-    #myAudio {
-      display: none; /* Скрывает элемент audio */
-    }
-    </style>
-    </head>
-    <body>
+#myAudio {
+  display: none;
+}
+</style>
+</head>
+<body>
 
-    <button id="myButton" onclick="playSound()"></button>
+<button id="myButton" onclick="playSound()"></button>
 
-    <audio id="myAudio" src="URL_ЗВУКА"></audio>  <!-- Замените на URL вашего звукового файла -->
+<audio id="myAudio" src="sounds/sound.mp3"></audio>  <!-- Укажите путь к вашему звуку -->
 
-    <script>
-    function playSound() {
-      var audio = document.getElementById("myAudio");
-      audio.play();
-    }
-    </script>
+<script>
+function playSound() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}
+</script>
 
-    </body>
-    </html>
+</body>
+</html>
