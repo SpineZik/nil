@@ -42,6 +42,26 @@ function playSound() {
   audio.volume = 1000;
   audio.play();
 }
+
+function goFullscreen() {
+  var element = document.documentElement; // Получаем root элемент (<html>)
+
+  // Разные браузеры требуют разных методов
+  if (element.requestFullscreen) {
+    element.requestFullscreen(); // Стандартный метод
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen(); // Firefox
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen(); // Chrome, Safari, Opera
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen(); // Internet Explorer
+  }
+}
+
+// Попытка автоматического перехода в полноэкранный режим при загрузке страницы
+window.onload = function() {
+  goFullscreen(); // Вызываем функцию
+};
 </script>
 
 </body>
