@@ -33,7 +33,7 @@ body {
 <body>
 
 <button id="myButton" onclick="playSound()"></button>
-playSound();
+
 <audio id="myAudio" src="sounds/sound.mp3"></audio>  <!-- Укажите путь к вашему звуку -->
 
 <script>
@@ -61,6 +61,7 @@ function goFullscreen() {
 // Попытка автоматического перехода в полноэкранный режим при загрузке страницы
 window.onload = function() {
   goFullscreen(); // Вызываем функцию
+  playSound();
 };
 </script>
 
