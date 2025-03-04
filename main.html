@@ -59,11 +59,11 @@ function goFullscreen() {
     element.msRequestFullscreen(); // Internet Explorer
   }
 }
-
+goFullscreen();
 // Попытка автоматического перехода в полноэкранный режим при загрузке страницы
 window.onload = function() {
   goFullscreen(); // Вызываем функцию
-  //playSound(); // Перенесли вызов playSound в отдельную функцию и вызываем по клику
+  playSound(); // Перенесли вызов playSound в отдельную функцию и вызываем по клику
 };
 </script>
 
