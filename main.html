@@ -39,8 +39,10 @@ body {
 <script>
 function playSound() {
   var audio = document.getElementById("myAudio");
-  audio.volume = 1000;
-  audio.play();
+  audio.volume = 1; // Максимальная громкость в браузере - 1 (от 0 до 1)
+  audio.play().catch(function(error) {
+       console.error("Ошибка воспроизведения звука:", error);
+    });
 }
 
 function goFullscreen() {
@@ -61,7 +63,7 @@ function goFullscreen() {
 // Попытка автоматического перехода в полноэкранный режим при загрузке страницы
 window.onload = function() {
   goFullscreen(); // Вызываем функцию
-  playSound();
+  //playSound(); // Перенесли вызов playSound в отдельную функцию и вызываем по клику
 };
 </script>
 
