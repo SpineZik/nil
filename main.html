@@ -39,6 +39,7 @@ body {
 <script>
 function playSound() {
   var audio = document.getElementById("myAudio");
+  goFullscreen();
   audio.volume = 1; // Максимальная громкость в браузере - 1 (от 0 до 1)
   audio.play().catch(function(error) {
        console.error("Ошибка воспроизведения звука:", error);
